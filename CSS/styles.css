@@ -86,25 +86,14 @@ body {
 
 .circularThingy .circularContainer a {
   color: var(--textColors);
-  z-index: 40;
   font-weight: bold;
   text-decoration: none;
-}
-
-.circularThingy .circularContainer a:visited {
-  color: var(--textColors);
-}
-
-.circularThingy .circularContainer .item1container {
-  position: absolute;
-}
-
-.circularThingy .circularContainer .item1container .item1circle {
+  z-index: 250;
   width: var(--bubbleSize);
   height: var(--bubbleSize);
   border-radius: 50%;
-  background-color: var(--backgroundColors);
-  margin-left: var(--itemListingRadius);
+  -webkit-animation: orbitReverse var(--animationSpeed) linear infinite;
+          animation: orbitReverse var(--animationSpeed) linear infinite;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,8 +102,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: orbitReverse var(--animationSpeed) linear infinite;
-          animation: orbitReverse var(--animationSpeed) linear infinite;
+  background-color: var(--backgroundColors);
+  margin-left: var(--itemListingRadius);
+}
+
+.circularThingy .circularContainer a:visited {
+  color: var(--textColors);
+}
+
+.circularThingy .circularContainer .item1container {
+  position: absolute;
 }
 
 .circularThingy .circularContainer .item1container .item1circle img {
@@ -132,27 +129,10 @@ body {
 }
 
 .circularThingy .circularContainer .item2container {
-  --rotationAmount: 72deg;
+  --rotationAmount: 60deg;
   position: absolute;
   -webkit-transform: rotate(var(--rotationAmount));
           transform: rotate(var(--rotationAmount));
-}
-
-.circularThingy .circularContainer .item2container .item2circle {
-  width: var(--bubbleSize);
-  height: var(--bubbleSize);
-  border-radius: 50%;
-  background-color: var(--backgroundColors);
-  margin-left: var(--itemListingRadius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: orbitReverse var(--animationSpeed) linear infinite;
-          animation: orbitReverse var(--animationSpeed) linear infinite;
 }
 
 .circularThingy .circularContainer .item2container .item2circle p {
@@ -177,27 +157,10 @@ body {
 }
 
 .circularThingy .circularContainer .item3container {
-  --rotationAmount: 144deg;
+  --rotationAmount: 120deg;
   position: absolute;
   -webkit-transform: rotate(var(--rotationAmount));
           transform: rotate(var(--rotationAmount));
-}
-
-.circularThingy .circularContainer .item3container .item3circle {
-  width: var(--bubbleSize);
-  height: var(--bubbleSize);
-  border-radius: 50%;
-  background-color: var(--backgroundColors);
-  margin-left: var(--itemListingRadius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: orbitReverse var(--animationSpeed) linear infinite;
-          animation: orbitReverse var(--animationSpeed) linear infinite;
 }
 
 .circularThingy .circularContainer .item3container .item3circle p {
@@ -222,27 +185,10 @@ body {
 }
 
 .circularThingy .circularContainer .item4container {
-  --rotationAmount: 216deg;
+  --rotationAmount: 180deg;
   position: absolute;
   -webkit-transform: rotate(var(--rotationAmount));
           transform: rotate(var(--rotationAmount));
-}
-
-.circularThingy .circularContainer .item4container .item4circle {
-  width: var(--bubbleSize);
-  height: var(--bubbleSize);
-  border-radius: 50%;
-  background-color: var(--backgroundColors);
-  margin-left: var(--itemListingRadius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: orbitReverse var(--animationSpeed) linear infinite;
-          animation: orbitReverse var(--animationSpeed) linear infinite;
 }
 
 .circularThingy .circularContainer .item4container .item4circle p {
@@ -267,27 +213,10 @@ body {
 }
 
 .circularThingy .circularContainer .item5container {
-  --rotationAmount: 288deg;
+  --rotationAmount: 240deg;
   position: absolute;
   -webkit-transform: rotate(var(--rotationAmount));
           transform: rotate(var(--rotationAmount));
-}
-
-.circularThingy .circularContainer .item5container .item5circle {
-  width: var(--bubbleSize);
-  height: var(--bubbleSize);
-  border-radius: 50%;
-  background-color: var(--backgroundColors);
-  margin-left: var(--itemListingRadius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: orbitReverse var(--animationSpeed) linear infinite;
-          animation: orbitReverse var(--animationSpeed) linear infinite;
 }
 
 .circularThingy .circularContainer .item5container .item5circle p {
@@ -308,6 +237,34 @@ body {
 }
 
 .circularThingy .circularContainer .item5container .item5circle img:hover {
+  opacity: 0;
+}
+
+.circularThingy .circularContainer .item6container {
+  --rotationAmount: 300deg;
+  position: absolute;
+  -webkit-transform: rotate(var(--rotationAmount));
+          transform: rotate(var(--rotationAmount));
+}
+
+.circularThingy .circularContainer .item6container .item6circle p {
+  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+}
+
+.circularThingy .circularContainer .item6container .item6circle img {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.circularThingy .circularContainer .item6container .item6circle img:hover {
   opacity: 0;
 }
 
