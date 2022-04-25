@@ -10,7 +10,7 @@ body {
   // Circular Selector variables -----------------
   --bubbleSize: 6rem;
   --itemListingRadius: 20em;
-  --animationSpeed: 19s;
+  --animationSpeed: 190s;
   --textColors: rgb(241, 241, 241);
   --backgroundColors: #1c7ab0;
 
@@ -69,52 +69,23 @@ body {
 
     //links don't overlap (z-index) and text styles and stuff
     //For base link ball
-    a {
-      color: var(--textColors);
-      font-weight: bold;
-      text-decoration: none;
-      z-index: 250; //why doesn't this work for all <a> elements?!
-      width: var(--bubbleSize);
-      height: var(--bubbleSize);
-      border-radius: 50%;
-      animation: orbitReverse var(--animationSpeed) linear infinite;
-      position: relative;
-      display: flex;
-      place-content: center;
-      align-items: center;
-      background-color: var(--backgroundColors);
-      margin-left: var(--itemListingRadius);
-    }
-    a:visited {
-      color: var(--textColors);
-    }
+    div {
+      a {
+        color: var(--textColors);
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 999; //why doesn't this work for all <a> elements?!
+        width: var(--bubbleSize);
+        height: var(--bubbleSize);
+        border-radius: 50%;
+        animation: orbitReverse var(--animationSpeed) linear infinite;
+        position: relative;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        background-color: var(--backgroundColors);
+        margin-left: var(--itemListingRadius);
 
-    //Link containers, bubbles going around, whatever
-    .item1container {
-      position: absolute;
-
-      .item1circle {
-        img {
-          border-radius: 50%;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transition-duration: 0.4s;
-          &:hover {
-            opacity: 0;
-          }
-        }
-      }
-    }
-    .item2container {
-      --rotationAmount: 60deg;
-      position: absolute;
-      transform: rotate(var(--rotationAmount));
-      .item2circle {
-        p {
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-        }
         img {
           border-radius: 50%;
           position: absolute;
@@ -128,6 +99,28 @@ body {
           }
         }
       }
+
+      a:visited {
+        color: var(--textColors);
+      }
+    }
+
+    //Link containers, bubbles going around, whatever
+    .item1container {
+      position: absolute;
+
+      .item1circle {
+      }
+    }
+    .item2container {
+      --rotationAmount: 60deg;
+      position: absolute;
+      transform: rotate(var(--rotationAmount));
+      .item2circle {
+        p {
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+        }
+      }
     }
     .item3container {
       --rotationAmount: 120deg;
@@ -136,18 +129,6 @@ body {
       .item3circle {
         p {
           transform: rotate(calc(-1 * var(--rotationAmount)));
-        }
-        img {
-          border-radius: 50%;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-          transition-duration: 0.4s;
-          &:hover {
-            opacity: 0;
-          }
         }
       }
     }
@@ -159,39 +140,16 @@ body {
         p {
           transform: rotate(calc(-1 * var(--rotationAmount)));
         }
-        img {
-          border-radius: 50%;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-          transition-duration: 0.4s;
-          &:hover {
-            opacity: 0;
-          }
-        }
       }
     }
     .item5container {
       --rotationAmount: 240deg;
       position: absolute;
       transform: rotate(var(--rotationAmount));
+
       .item5circle {
         p {
           transform: rotate(calc(-1 * var(--rotationAmount)));
-        }
-        img {
-          border-radius: 50%;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-          transition-duration: 0.4s;
-          &:hover {
-            opacity: 0;
-          }
         }
       }
     }
@@ -202,18 +160,6 @@ body {
       .item6circle {
         p {
           transform: rotate(calc(-1 * var(--rotationAmount)));
-        }
-        img {
-          border-radius: 50%;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-          transition-duration: 0.4s;
-          &:hover {
-            opacity: 0;
-          }
         }
       }
     }

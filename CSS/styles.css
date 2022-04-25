@@ -13,7 +13,7 @@ body {
 .circularThingy {
   --bubbleSize: 6rem;
   --itemListingRadius: 20em;
-  --animationSpeed: 19s;
+  --animationSpeed: 190s;
   --textColors: rgb(241, 241, 241);
   --backgroundColors: #1c7ab0;
   margin-top: 30vh;
@@ -84,11 +84,11 @@ body {
   border-radius: 1em;
 }
 
-.circularThingy .circularContainer a {
+.circularThingy .circularContainer div a {
   color: var(--textColors);
   font-weight: bold;
   text-decoration: none;
-  z-index: 250;
+  z-index: 999;
   width: var(--bubbleSize);
   height: var(--bubbleSize);
   border-radius: 50%;
@@ -106,26 +106,28 @@ body {
   margin-left: var(--itemListingRadius);
 }
 
-.circularThingy .circularContainer a:visited {
+.circularThingy .circularContainer div a img {
+  border-radius: 50%;
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  opacity: 1;
+  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.circularThingy .circularContainer div a img:hover {
+  opacity: 0;
+}
+
+.circularThingy .circularContainer div a:visited {
   color: var(--textColors);
 }
 
 .circularThingy .circularContainer .item1container {
   position: absolute;
-}
-
-.circularThingy .circularContainer .item1container .item1circle img {
-  border-radius: 50%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.circularThingy .circularContainer .item1container .item1circle img:hover {
-  opacity: 0;
 }
 
 .circularThingy .circularContainer .item2container {
@@ -140,22 +142,6 @@ body {
           transform: rotate(calc(-1 * var(--rotationAmount)));
 }
 
-.circularThingy .circularContainer .item2container .item2circle img {
-  border-radius: 50%;
-  position: absolute;
-  width: 102%;
-  height: 102%;
-  opacity: 1;
-  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.circularThingy .circularContainer .item2container .item2circle img:hover {
-  opacity: 0;
-}
-
 .circularThingy .circularContainer .item3container {
   --rotationAmount: 120deg;
   position: absolute;
@@ -166,22 +152,6 @@ body {
 .circularThingy .circularContainer .item3container .item3circle p {
   -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
           transform: rotate(calc(-1 * var(--rotationAmount)));
-}
-
-.circularThingy .circularContainer .item3container .item3circle img {
-  border-radius: 50%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.circularThingy .circularContainer .item3container .item3circle img:hover {
-  opacity: 0;
 }
 
 .circularThingy .circularContainer .item4container {
@@ -196,22 +166,6 @@ body {
           transform: rotate(calc(-1 * var(--rotationAmount)));
 }
 
-.circularThingy .circularContainer .item4container .item4circle img {
-  border-radius: 50%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.circularThingy .circularContainer .item4container .item4circle img:hover {
-  opacity: 0;
-}
-
 .circularThingy .circularContainer .item5container {
   --rotationAmount: 240deg;
   position: absolute;
@@ -224,22 +178,6 @@ body {
           transform: rotate(calc(-1 * var(--rotationAmount)));
 }
 
-.circularThingy .circularContainer .item5container .item5circle img {
-  border-radius: 50%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.circularThingy .circularContainer .item5container .item5circle img:hover {
-  opacity: 0;
-}
-
 .circularThingy .circularContainer .item6container {
   --rotationAmount: 300deg;
   position: absolute;
@@ -250,22 +188,6 @@ body {
 .circularThingy .circularContainer .item6container .item6circle p {
   -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
           transform: rotate(calc(-1 * var(--rotationAmount)));
-}
-
-.circularThingy .circularContainer .item6container .item6circle img {
-  border-radius: 50%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  -webkit-transform: rotate(calc(-1 * var(--rotationAmount)));
-          transform: rotate(calc(-1 * var(--rotationAmount)));
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.circularThingy .circularContainer .item6container .item6circle img:hover {
-  opacity: 0;
 }
 
 @-webkit-keyframes orbit {
