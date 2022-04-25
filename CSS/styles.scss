@@ -1,0 +1,248 @@
+body {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  background-color: rgb(23, 23, 23);
+  margin: 0;
+}
+
+.circularThingy {
+  // Circular Selector variables -----------------
+  --bubbleSize: 6rem;
+  --itemListingRadius: 20em;
+  --animationSpeed: 19s;
+  --textColors: rgb(241, 241, 241);
+  --backgroundColors: #1c7ab0;
+
+  // -------------------------------------------
+  margin-top: 30vh;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  position: relative;
+
+  .circularContainer {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 2em;
+    animation: orbit var(--animationSpeed) linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+      div {
+        animation-play-state: paused;
+        .item1circle,
+        .item2circle,
+        .item3circle,
+        .item4circle,
+        .item5circle,
+        .item6circle,
+        .item7circle,
+        .item8circle {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    //Center picture and stuff
+    .centerPicture {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-color: rgb(45, 142, 42);
+      border-radius: 1em;
+      animation: orbitReverse var(--animationSpeed) linear infinite;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1em;
+      }
+    }
+
+    //links don't overlap (z-index) and text styles and stuff
+    a {
+      color: var(--textColors);
+      z-index: 40;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:visited {
+      color: var(--textColors);
+    }
+
+    //Link containers, bubbles going around, whatever
+    .item1container {
+      position: absolute;
+
+      .item1circle {
+        width: var(--bubbleSize);
+        height: var(--bubbleSize);
+        border-radius: 50%;
+        background-color: var(--backgroundColors);
+        margin-left: var(--itemListingRadius);
+        position: relative;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        animation: orbitReverse var(--animationSpeed) linear infinite;
+
+        img {
+          border-radius: 50%;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          transition-duration: 0.4s;
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .item2container {
+      --rotationAmount: 72deg;
+      position: absolute;
+      transform: rotate(var(--rotationAmount));
+      .item2circle {
+        width: var(--bubbleSize);
+        height: var(--bubbleSize);
+        border-radius: 50%;
+        background-color: var(--backgroundColors);
+        margin-left: var(--itemListingRadius);
+        display: flex;
+        place-content: center;
+        align-items: center;
+        animation: orbitReverse var(--animationSpeed) linear infinite;
+        p {
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+        }
+        img {
+          border-radius: 50%;
+          position: absolute;
+          width: 102%;
+          height: 102%;
+          opacity: 1;
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+          transition-duration: 0.4s;
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .item3container {
+      --rotationAmount: 144deg;
+      position: absolute;
+      transform: rotate(var(--rotationAmount));
+      .item3circle {
+        width: var(--bubbleSize);
+        height: var(--bubbleSize);
+        border-radius: 50%;
+        background-color: var(--backgroundColors);
+        margin-left: var(--itemListingRadius);
+        display: flex;
+        place-content: center;
+        align-items: center;
+        animation: orbitReverse var(--animationSpeed) linear infinite;
+        p {
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+        }
+        img {
+          border-radius: 50%;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+          transition-duration: 0.4s;
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .item4container {
+      --rotationAmount: 216deg;
+      position: absolute;
+      transform: rotate(var(--rotationAmount));
+      .item4circle {
+        width: var(--bubbleSize);
+        height: var(--bubbleSize);
+        border-radius: 50%;
+        background-color: var(--backgroundColors);
+        margin-left: var(--itemListingRadius);
+        display: flex;
+        place-content: center;
+        align-items: center;
+        animation: orbitReverse var(--animationSpeed) linear infinite;
+
+        p {
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+        }
+        img {
+          border-radius: 50%;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+          transition-duration: 0.4s;
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .item5container {
+      --rotationAmount: 288deg;
+      position: absolute;
+      transform: rotate(var(--rotationAmount));
+      .item5circle {
+        width: var(--bubbleSize);
+        height: var(--bubbleSize);
+        border-radius: 50%;
+        background-color: var(--backgroundColors);
+        margin-left: var(--itemListingRadius);
+        display: flex;
+        place-content: center;
+        align-items: center;
+        animation: orbitReverse var(--animationSpeed) linear infinite;
+
+        p {
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+        }
+        img {
+          border-radius: 50%;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          transform: rotate(calc(-1 * var(--rotationAmount)));
+          transition-duration: 0.4s;
+          &:hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbitReverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
