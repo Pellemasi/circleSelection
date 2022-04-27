@@ -84,7 +84,12 @@ body {
   border-radius: 1em;
 }
 
+.circularThingy .circularContainer div {
+  pointer-events: none;
+}
+
 .circularThingy .circularContainer div a {
+  pointer-events: all;
   color: var(--textColors);
   font-weight: bold;
   text-decoration: none;

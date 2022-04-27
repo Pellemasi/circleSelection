@@ -70,7 +70,9 @@ body {
     //links don't overlap (z-index) and text styles and stuff
     //For base link ball
     div {
+      pointer-events: none;
       a {
+        pointer-events: all;
         color: var(--textColors);
         font-weight: bold;
         text-decoration: none;
