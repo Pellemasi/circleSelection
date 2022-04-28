@@ -87,7 +87,10 @@ body {
         align-items: center;
         background-color: var(--backgroundColors);
         margin-left: var(--itemListingRadius);
-
+        transition-duration: 0.4s;
+        &:hover {
+          box-shadow: 0 0 1em rgba(191, 191, 191, 0.667);
+        }
         img {
           border-radius: 50%;
           position: absolute;

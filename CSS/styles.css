@@ -109,6 +109,13 @@ body {
           align-items: center;
   background-color: var(--backgroundColors);
   margin-left: var(--itemListingRadius);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.circularThingy .circularContainer div a:hover {
+  -webkit-box-shadow: 0 0 1em rgba(191, 191, 191, 0.667);
+          box-shadow: 0 0 1em rgba(191, 191, 191, 0.667);
 }
 
 .circularThingy .circularContainer div a img {
